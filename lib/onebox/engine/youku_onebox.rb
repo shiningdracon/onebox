@@ -7,7 +7,7 @@ module Onebox
       matches_regexp(/^http:\/\/(?:v\.youku\.com|player\.youku\.com)\/.+$/)
 
       def video_id
-        match = @url.match(/^https?:\/\/(v\.youku\.com\/v_show\/id_|player\.youku\.com\/player\.php\/sid\/)([a-zA-Z0-9_\-]{13})(\.html|\/v\.swf)$/)
+        match = @url.match(/^https?:\/\/(v\.youku\.com\/v_show\/id_|player\.youku\.com\/player\.php\/sid\/)([a-zA-Z0-9_\-]{13})(\.html|\/v\.swf)\?*.*$/)
         match && match[2]
       end
 
